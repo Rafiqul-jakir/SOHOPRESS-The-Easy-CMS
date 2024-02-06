@@ -1,6 +1,7 @@
 <?php 
   require "../includes/header.php";
-  require "../config/config.php";  
+  require "../config/config.php";
+  require "restricted.php";  
 ?>
 
 
