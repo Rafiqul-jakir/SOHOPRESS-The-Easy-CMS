@@ -25,7 +25,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="<?php echo APPURL ?>">Start Bootstrap</a>
+                <a class="navbar-brand" href="<?php echo APPURL ?>">SOHOPRESS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -33,25 +33,26 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>/posts/create.html">create</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a></li>
+
+
                         <?php if(!isset($_SESSION['user_email'])): ?>
                             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>/auth/login.php">login</a></li>
                             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>/auth/register.php">register</a></li>
                         <?php endif; ?>
-                        
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>/contact.php">Contact</a></li>
                         <?php if(isset($_SESSION['user_name'])): ?>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>/posts/create.php">create</a></li>
                             <li class="nav-item dropdown mt-3">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php echo $_SESSION['user_name']; ?>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo APPURL ?>/auth/logout.php">Logout</a></li>
                                 </ul>
                             </li>
                         <?php endif; ?>
+                        
                        
                     </ul>
                 </div>
@@ -63,8 +64,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                            <h1>SOHOPRESS</h1>
+                            <span class="subheading">A Blog Theme by Rafiqul Jakir</span>
                         </div>
                     </div>
                 </div>
