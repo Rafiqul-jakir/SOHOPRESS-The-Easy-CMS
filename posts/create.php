@@ -15,17 +15,17 @@
         $image = $_FILES['post_img']['name'];  
         $image_tmp = $_FILES['post_img']['tmp_name']; 
 
-        $user_id = $_SESSION['user_id'];
+        $user_name = $_SESSION['user_name'];
 
         $dir = "../assets/img/post_images/".basename($image);
 
-        $insert_post = $conn->prepare("INSERT INTO posts(title, sub_title, description, post_image, user_id) VALUES(:title, :sub_title, :description, :post_image, :user_id)");
+        $insert_post = $conn->prepare("INSERT INTO posts(title, sub_title, description, post_image, user_name) VALUES(:title, :sub_title, :description, :post_image, :user_name)");
         $insert_post->execute([
             ":title" => $title,
             ":sub_title" => $sub_title ,
             ":description" => $description ,
             ":post_image" => $image ,
-            ":user_id" => $user_id,
+            ":user_name" => $user_name,
         ]);
 
         if(move_uploaded_file($image_tmp, $dir)){
