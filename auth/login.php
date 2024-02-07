@@ -18,6 +18,7 @@
                 // Start Session
                 $_SESSION['user_email'] = $fetch['email'];
                 $_SESSION['user_name'] = $fetch['username'];
+                $_SESSION['user_id'] = $fetch['ID'];
 
                 header("location:".APPURL."");
             }else{
