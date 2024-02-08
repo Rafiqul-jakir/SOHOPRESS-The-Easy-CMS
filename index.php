@@ -18,7 +18,7 @@
                     <!-- Post preview-->
                     <?php foreach($posts as $posts): ?>
                     <div class="post-preview">
-                        <a href="posts/post.html">
+                        <a href="posts/post.php?post_id=<?php echo $posts->ID ?>">
                             <h2 class="post-title"><?php echo $posts->title ?></h2>
                             <h3 class="post-subtitle"><?php echo $posts->sub_title ?></h3>
                         </a>
@@ -28,7 +28,6 @@
                             <?php
                                 $input_date = $posts->created_at;
                                 $output_date = date("F j, Y", strtotime($input_date));
-
                             ?>
                             on <?php echo $output_date; ?>
                         </p>
