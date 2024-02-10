@@ -9,6 +9,10 @@
     $post_query->execute();
     $posts = $post_query->fetchAll(PDO::FETCH_OBJ);
 
+    $cat_query = $conn->query("SELECT * FROM categories ORDER BY created_at DESC");
+    $cat_query->execute();
+    $category = $cat_query->fetchAll(PDO::FETCH_OBJ);
+
 
 ?>
         <!-- Main Content-->
@@ -37,6 +41,19 @@
                     <!-- Pager-->
                     <?php endforeach; ?>
                 </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+
+                <?php foreach($category as $category): ?>
+                    <div class="col-md-6 text-center ">
+                        <a href="<?php echo APPURL ?>/category/category.php?cat_id=<?php echo $category->ID ?>">
+                            <div class="alert alert-dark bg-dark text-white" role="alert">
+                                <?php echo $category->name ?>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach ?>
+
             </div>
         </div>
         <!-- Footer-->
