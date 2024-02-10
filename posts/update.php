@@ -11,7 +11,9 @@
         $p_post->execute();
         $fetch = $p_post->fetch(PDO::FETCH_OBJ);
 
-
+        if($fetch->user_name !== $_SESSION['user_name']){
+          header("location: http://localhost/SOHOPRESS");
+        }
         //update query
         if(isset($_POST['submit'])){
           
