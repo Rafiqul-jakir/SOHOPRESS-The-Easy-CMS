@@ -43,10 +43,12 @@
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center">
-
+                <div class="text-center p-5">
+                    <h2>Categories</h2>
+                </div>
                 <?php foreach($category as $category): ?>
                     <div class="col-md-6 text-center ">
-                        <a href="<?php echo APPURL ?>/category/category.php?cat_id=<?php echo $category->ID ?>">
+                        <a href="<?php echo APPURL ?>/category/category.php?cat_name=<?php echo $category->name ?>">
                             <div class="alert alert-dark bg-dark text-white" role="alert">
                                 <?php echo $category->name ?>
                             </div>
