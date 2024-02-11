@@ -47,7 +47,7 @@
                                     <?php echo $_SESSION['user_name']; ?>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo APPURL ?>/users/profile.php?profile_id=<?php echo $_SESSION['user_id'] ?>">Profile</a></li>
                                     <li><a class="dropdown-item" href="<?php echo APPURL ?>/auth/logout.php">Logout</a></li>
                                 </ul>
                             </li>
