@@ -1,8 +1,7 @@
 <?php
     require "includes/header.php";
     require "config/config.php";
-    
-    ?>
+?>
 <?php
 
     $post_query = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");

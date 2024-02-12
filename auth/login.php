@@ -22,10 +22,10 @@
 
                 header("location:".APPURL."");
             }else{
-                $wrong_login = "Email or Password in invalid ";
+                $wrong_login = "Email or Password in invalid";
             }
         }else{
-            $wrong_login = "Email or Password invalid ";
+            $wrong_login = "Email or Password invalid";
         }
 
     }

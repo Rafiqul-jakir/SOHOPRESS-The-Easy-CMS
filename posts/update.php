@@ -38,9 +38,11 @@
 
             if(move_uploaded_file($image_tmp, $dir)){
               header("location: http://localhost/SOHOPRESS/posts/post.php?post_id=".$update_id."");
-          }
+            }
             
         }
+    }else{
+      header("location:".APPURL."/404.php");
     }
 
 

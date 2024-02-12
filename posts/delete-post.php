@@ -20,5 +20,7 @@
         $delete_post->execute();
 
         header("location: http://localhost/SOHOPRESS");
+    }else{
+        header("location:".APPURL."/404.php");
     }
 ?>

@@ -8,6 +8,8 @@
         $cat_post = $conn->query("SELECT * FROM posts WHERE categories = '$cat_name' ORDER BY created_at DESC");
         $cat_post->execute();
         $post = $cat_post->fetchAll(PDO::FETCH_OBJ);
+    }else{
+        header("location:".APPURL."/404.php");
     }
     
 ?>

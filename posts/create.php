@@ -36,7 +36,11 @@
 
         if(move_uploaded_file($image_tmp, $dir)){
             header("location: ".APPURL."");
+        }else{
+            header("location:".APPURL."/404.php");
         }
+    }else{
+        header("location:".APPURL."/404.php");
     }
 
 
