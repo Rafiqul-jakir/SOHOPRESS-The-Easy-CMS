@@ -23,7 +23,7 @@
 
     <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
       <div class="container">
-      <a class="navbar-brand" href="#">SOHOPRESS</a>
+      <a class="navbar-brand" href="<?php echo ADMINURL ?>">SOHOPRESS</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -64,11 +64,11 @@
                 <?php echo $_SESSION['admin_name']; ?>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="<?php echo ADMINURL ?>/admins/admin-logout.php">Logout</a>
             </li>
           <?php else: ?>
             <li class="nav-item">
-              <a class="nav-link" href="admins/login-admins.html">login
+              <a class="nav-link" href="<?php echo ADMINURL ?>/admins/login-admins.php">login
                 <span class="sr-only">(current)</span>
               </a>
             </li>
