@@ -8,6 +8,11 @@
     $post_query = $conn->query("SELECT * FROM posts WHERE ID = '$post_id'");
     $post_query -> execute();
     $single_post = $post_query->fetch(PDO::FETCH_OBJ);
+    
+    if($post_query->rowCount() == 0){
+        header("location: ".APPURL."/404.php");
+        exit;
+    }
 
 ?>
         <!-- Page Header-->

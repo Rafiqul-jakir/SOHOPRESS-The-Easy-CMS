@@ -4,7 +4,7 @@
 ?>
 <?php
 
-    $post_query = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
+    $post_query = $conn->query("SELECT * FROM posts WHERE status = '1' ORDER BY created_at DESC");
     $post_query->execute();
     $posts = $post_query->fetchAll(PDO::FETCH_OBJ);
 
