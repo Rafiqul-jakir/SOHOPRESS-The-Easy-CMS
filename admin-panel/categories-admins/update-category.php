@@ -6,7 +6,7 @@
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
   }
-
+  $already_exist = "";
 
   if(isset($_GET['cat_u_id'])){
     $update_cat_id = $_GET['cat_u_id'];
@@ -16,10 +16,18 @@
 
     if(isset($_POST['submit'])){
       $cat_name = $_POST['cat_name'];
-      $cat_query = $conn->prepare("UPDATE categories SET name = ? WHERE ID = ?");
-      $cat_query->execute([$cat_name, $update_cat_id]);
-      header("location: http://localhost/SOHOPRESS/admin-panel/categories-admins/show-categories.php");
-      exit; 
+      $cat_check = $conn->query("SELECT name FROM categories WHERE name = '$cat_name'");
+      $cat_check->execute();
+      if($cat_check->rowCount() > 0 ){
+        $already_exist = " This Category Already Exist !!";
+      }else{
+        $cat_query = $conn->prepare("UPDATE categories SET name = ? WHERE ID = ?");
+        $cat_query->execute([$cat_name, $update_cat_id]);
+        header("location: http://localhost/SOHOPRESS/admin-panel/categories-admins/show-categories.php");
+        exit; 
+
+      }
+
     }
 }
 
@@ -38,7 +46,9 @@
                  
                 </div>
 
-      
+                <div class="form-outline">
+                    <p class="text-danger"> <?php echo $already_exist ?></p>
+                  </div>
                 <!-- Submit button -->
                 <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">update</button>
 

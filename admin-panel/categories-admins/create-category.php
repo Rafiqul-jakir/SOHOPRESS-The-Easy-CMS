@@ -6,14 +6,22 @@
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
   }
+  $already_exist = "";
   if(isset($_POST['submit'])){
     $cat_name = $_POST['cat_name'];
-    $cat_query = $conn->prepare("INSERT INTO categories(name) VALUES(:name)");
-    $cat_query->execute([
-      ":name" => $cat_name,
-    ]);
+    $cat_check = $conn->query("SELECT name FROM categories WHERE name = '$cat_name'");
+    $cat_check->execute();
+    if($cat_check->rowCount() > 0 ){
+      $already_exist = "Already This Category Exist !!";
+    }else{
+      $cat_query = $conn->prepare("INSERT INTO categories(name) VALUES(:name)");
+      $cat_query->execute([
+        ":name" => $cat_name,
+      ]);
+  
+      header("location: http://localhost/SOHOPRESS/admin-panel/categories-admins/show-categories.php");
+    }
 
-    header("location: http://localhost/SOHOPRESS/admin-panel//categories-admins/show-categories.php");
 
   }
 
@@ -32,7 +40,9 @@
                  
                 </div>
 
-      
+                <div class="form-outline">
+                    <p class="text-danger"> <?php echo $already_exist ?></p>
+                  </div>
                 <!-- Submit button -->
                 <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">create</button>
 
