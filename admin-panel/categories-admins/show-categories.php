@@ -37,7 +37,7 @@
                     <th scope="row"><?php echo $all_cat->ID ?></th>
                     <td><?php echo $all_cat->name ?></td>
                     <td><a  href="update-category.php?cat_u_id=<?php echo$all_cat->ID?>" class="btn btn-warning text-white text-center ">Update Categories</a></td>
-                    <td><a href="delete-category.php?cat_d_id = <?php echo$all_cat->ID?>" class="btn btn-danger  text-center ">Delete Categories</a></td>
+                    <td><a href="delete-category.php?cat_d_id=<?php echo$all_cat->ID?>" class="btn btn-danger  text-center ">Delete Categories</a></td>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
