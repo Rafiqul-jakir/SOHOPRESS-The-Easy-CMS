@@ -26,9 +26,9 @@
                 <thead>
                     <tr class="text-center">
                       <th scope="col">#</th>
-                      <th scope="col">name</th>
-                      <th scope="col">update</th>
-                      <th scope="col">delete</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Update</th>
+                      <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +36,8 @@
                   <tr class="text-center">
                     <th scope="row"><?php echo $all_cat->ID ?></th>
                     <td><?php echo $all_cat->name ?></td>
-                    <td><a  href="update-category.php?cat_u_id=<?php echo$all_cat->ID?>" class="btn btn-warning text-white text-center ">Update Categories</a></td>
-                    <td><a href="delete-category.php?cat_d_id=<?php echo$all_cat->ID?>" class="btn btn-danger  text-center ">Delete Categories</a></td>
+                    <td><a  href="update-category.php?cat_u_id=<?php echo$all_cat->ID?>" class="btn btn-success text-white text-center ">Update</a></td>
+                    <td><a href="delete-category.php?cat_d_id=<?php echo$all_cat->ID?>" class="btn btn-danger  text-center ">Delete</a></td>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
