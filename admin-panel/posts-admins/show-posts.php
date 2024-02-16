@@ -27,6 +27,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Category</th>
                     <th scope="col">User</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Delete</th>
                   </tr>
                 </thead>
@@ -37,6 +38,11 @@
                       <td><?php echo $posts->title ?></td>
                       <td><?php echo $posts->categories ?></td>
                       <td><?php echo $posts->user_name ?></td>
+                      <?php if($posts->status == 0): ?>
+                        <td><a href="update-status.php?post_s_id=<?php echo $posts->ID ?>" class="btn btn-primary  text-center ">Pending</a></td>
+                      <?php else: ?>
+                        <td><a href="update-status.php?post_s_id=<?php echo $posts->ID ?>" class="btn btn-success  text-center ">Approved</a></td>
+                      <?php endif; ?>
                       <td><a href="delete-posts.php?post_d_id=<?php echo $posts->ID ?>" class="btn btn-danger  text-center ">delete</a></td>
                     </tr>
                   <?php endforeach; ?>

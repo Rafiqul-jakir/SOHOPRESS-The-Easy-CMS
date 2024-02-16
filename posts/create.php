@@ -24,7 +24,7 @@
 
         $dir = "../assets/img/post_images/".basename($image);
 
-        $insert_post = $conn->prepare("INSERT INTO posts(title, sub_title, description, post_image, categories, user_name) VALUES(:title, :sub_title, :description, :post_image, :categories, :user_name)");
+        $insert_post = $conn->prepare("INSERT INTO posts(title, sub_title, description, post_image, categories, user_name, status) VALUES(:title, :sub_title, :description, :post_image, :categories, :user_name, :status)");
         $insert_post->execute([
             ":title" => $title,
             ":sub_title" => $sub_title ,
@@ -32,6 +32,7 @@
             ":post_image" => $image ,
             ":categories" => $category,
             ":user_name" => $user_name,
+            ":status" => 0,
         ]);
 
         if(move_uploaded_file($image_tmp, $dir)){
@@ -39,8 +40,6 @@
         }else{
             header("location:".APPURL."/404.php");
         }
-    }else{
-        header("location:".APPURL."/404.php");
     }
 
 
