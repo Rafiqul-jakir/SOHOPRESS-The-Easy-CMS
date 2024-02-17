@@ -40,9 +40,9 @@
                         <td><?php echo $comments->post_id ?></td>
                         <td><?php echo $comments->user_name ?></td>
                         <?php if($comments->status == 0): ?>
-                            <td><a href="update-status.php?post_s_id=<?php echo $comments->ID ?>" class="btn btn-primary  text-center ">Pending</a></td>
+                            <td><a href="update-status.php?comment_s_id=<?php echo $comments->ID ?>" class="btn btn-primary  text-center ">Pending</a></td>
                         <?php else: ?>
-                            <td><a href="update-status.php?post_s_id=<?php echo $comments->ID ?>" class="btn btn-success  text-center ">Approved</a></td>
+                            <td><a href="update-status.php?comment_s_id=<?php echo $comments->ID ?>" class="btn btn-success  text-center ">Approved</a></td>
                         <?php endif; ?>
                         <td><a href="delete_comment.php?comment_d_id=<?php echo $comments->ID ?>" class="btn btn-danger  text-center ">delete</a></td>
                         <td><a href="../../posts/post.php?post_id=<?php echo $comments->post_id ?>" target="_blank" class="btn btn-success  text-center ">View</a></td>
