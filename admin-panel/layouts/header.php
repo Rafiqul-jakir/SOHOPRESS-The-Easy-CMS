@@ -44,9 +44,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo ADMINURL ?>posts-admins/show-posts.php" style="margin-left: 20px;">Posts</a>
               </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-left: 20px;">Comments</a>
-              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo ADMINURL ?>comments/show_comment.php" style="margin-left: 20px;">Comments</a>
+              </li>
             </ul>
           <?php endif; ?>
         <ul class="navbar-nav ml-md-auto d-md-flex">
