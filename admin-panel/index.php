@@ -5,7 +5,7 @@
   if(!isset($_SESSION['admin_email'])){
 
     header("location: ".ADMINURL."/admins/login-admins.php");
-
+    exit;
   }
 
   //query for post

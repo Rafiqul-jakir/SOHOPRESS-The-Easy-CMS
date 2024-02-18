@@ -14,6 +14,7 @@
 
         if($fetch->username !== $_SESSION['user_name']){
           header("location: http://localhost/SOHOPRESS");
+          exit;
         }
         //update query
         if(isset($_POST['submit'])){

@@ -3,7 +3,7 @@
     require "config/config.php";
 ?>
 <?php
-
+    
     $post_query = $conn->query("SELECT * FROM posts WHERE status = '1' ORDER BY created_at DESC");
     $post_query->execute();
     $posts = $post_query->fetchAll(PDO::FETCH_OBJ);
@@ -11,7 +11,6 @@
     $cat_query = $conn->query("SELECT * FROM categories ORDER BY created_at DESC");
     $cat_query->execute();
     $category = $cat_query->fetchAll(PDO::FETCH_OBJ);
-
 
 ?>
         <!-- Main Content-->

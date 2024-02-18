@@ -12,6 +12,7 @@
 
         if($img_name->user_name !== $_SESSION['user_name']){
             header("location: http://localhost/SOHOPRESS");
+            exit;
           }
 
         unlink("../assets/img/post_images/".$img_name->post_image."");
@@ -20,7 +21,9 @@
         $delete_post->execute();
 
         header("location: http://localhost/SOHOPRESS");
+        exit;
     }else{
         header("location:".APPURL."/404.php");
+        exit;
     }
 ?>

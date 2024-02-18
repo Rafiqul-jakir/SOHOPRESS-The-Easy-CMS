@@ -4,6 +4,7 @@ require "../../config/config.php";
 
 if (!isset($_SESSION['admin_email'])) {
     header("location: " . ADMINURL . "");
+    exit;
 }
 
 if (isset($_POST['submit'])) {
@@ -21,6 +22,7 @@ if (isset($_POST['submit'])) {
             ":admin_password" => $admin_password,
         ]);
         header("location: admins.php");
+        exit;
     }
 }
 

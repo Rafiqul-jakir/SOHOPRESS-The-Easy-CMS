@@ -23,6 +23,7 @@
           ":password" => $password,
         ]);
         header("location: login.php");
+        exit;
       }
     }
 

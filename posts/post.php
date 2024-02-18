@@ -32,6 +32,7 @@
             ":status" => 0,
         ]);
         header("location: http://localhost/SOHOPRESS/posts/post.php?post_id=".$post_id ."");
+        exit;
     }
 
 ?>

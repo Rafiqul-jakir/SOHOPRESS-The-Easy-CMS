@@ -21,6 +21,7 @@
                 $_SESSION['user_id'] = $fetch['ID'];
 
                 header("location:".APPURL."");
+                exit;
             }else{
                 $wrong_login = "Email or Password in invalid";
             }

@@ -5,6 +5,7 @@
 
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
+    exit;
   }
 
   $admin_query = $conn->query("SELECT * FROM admins");

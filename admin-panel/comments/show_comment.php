@@ -5,6 +5,7 @@
 
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
+    exit;
   }
   $cmnt_query = $conn->query("SELECT * FROM comments ORDER BY created_at DESC");
   $cmnt_query->execute();

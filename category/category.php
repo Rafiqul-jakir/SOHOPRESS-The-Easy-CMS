@@ -10,6 +10,7 @@
         $post = $cat_post->fetchAll(PDO::FETCH_OBJ);
     }else{
         header("location:".APPURL."/404.php");
+        exit;
     }
     
 ?>

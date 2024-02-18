@@ -5,6 +5,7 @@
 
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
+    exit;
   }
   $post_query = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
   $post_query->execute();

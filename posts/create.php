@@ -4,6 +4,7 @@
 
     if(!isset($_SESSION['user_email'])){
         header("location: http://localhost/SOHOPRESS");
+        exit;
     }
 
     $cat_query = $conn->query("SELECT * FROM categories ORDER BY created_at DESC");
@@ -37,8 +38,10 @@
 
         if(move_uploaded_file($image_tmp, $dir)){
             header("location: ".APPURL."");
+            exit;
         }else{
             header("location:".APPURL."/404.php");
+            exit;
         }
     }
 

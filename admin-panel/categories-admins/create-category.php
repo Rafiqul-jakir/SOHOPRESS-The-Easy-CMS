@@ -5,6 +5,7 @@
 
   if(!isset($_SESSION['admin_email'])){
     header("location: ".ADMINURL."");
+    exit;
   }
   $already_exist = "";
   if(isset($_POST['submit'])){
@@ -20,6 +21,7 @@
       ]);
   
       header("location: http://localhost/SOHOPRESS/admin-panel/categories-admins/show-categories.php");
+      exit;
     }
 
 
