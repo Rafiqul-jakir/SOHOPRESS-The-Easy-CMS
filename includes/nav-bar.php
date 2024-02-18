@@ -32,6 +32,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item">
+                        <div class="input-group">
+                                <div id="navbar-search-autocomplete" class="w-100 mr-4">
+                                    <form method="POST" action="http://localhost/SOHOPRESS/search.php" class="mr-4">
+                                        <input name="search" type="search" id="form1" class="form-control rounded mt-3" placeholder="search" required/>
+                                    
+                                    </form>
+
+                                </div>
+                                
+                        </div>
+                    </li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo APPURL ?>">Home</a></li>
 
 
