@@ -53,32 +53,32 @@
 
             <form method="POST" action="create.php" enctype="multipart/form-data">
               <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="text" name="title" id="form2Example1" class="form-control" placeholder="title" required />
-               
-              </div>
+                <div class="form-outline mb-4">
+                    <input type="text" name="title" id="form2Example1" class="form-control" placeholder="title" required />
+                
+                </div>
 
-              <div class="form-outline mb-4">
-                <input type="text" name="sub_title" id="form2Example1" class="form-control" placeholder="subtitle" required/>
-            </div>
+                <div class="form-outline mb-4">
+                    <input type="text" name="sub_title" id="form2Example1" class="form-control" placeholder="subtitle" required/>
+                </div>
 
-              <div class="form-outline mb-4">
-                <textarea type="text" name="description" id="form2Example1" class="form-control" placeholder="Description" rows="8" required></textarea>
-            </div>
+                <div class="form-outline mb-4">
+                    <textarea type="text" name="description" id="form2Example1" class="form-control" placeholder="Description" rows="8" required></textarea>
+                </div>
 
               
-             <div class="form-outline mb-4">
-                <input type="file" name="post_img" id="form2Example1" class="form-control" placeholder="image" required/>
-            </div>
+                <div class="form-outline mb-4">
+                    <input type="file" name="post_img" id="form2Example1" class="form-control" placeholder="image" required/>
+                </div>
 
-            <div class="form-outline mb-4">
-                <label for="category" class="form-label">Select Categories</label>
-                <select name = "category" class="form-select" id="category" required>
-                    <?php foreach($category as $category ): ?>
-                        <option value="<?php echo $category->name ?>"><?php echo $category->name ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
+                <div class="form-outline mb-4">
+                    <label for="category" class="form-label">Select Categories</label>
+                    <select name = "category" class="form-select" id="category" required>
+                        <?php foreach($category as $category ): ?>
+                            <option value="<?php echo $category->name ?>"><?php echo $category->name ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
 
 
 

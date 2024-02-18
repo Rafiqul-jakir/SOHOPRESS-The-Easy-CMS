@@ -7,7 +7,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>SOHOPRESS</h1>
-                            <span class="subheading">A Blog Theme by Rafiqul Jakir</span>
+                            <span class="subheading">A blog Theme By Rafiqul Jakir</span>
                         </div>
                     </div>
                 </div>
