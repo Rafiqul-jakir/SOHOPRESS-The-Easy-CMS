@@ -32,6 +32,7 @@
                             No related post found !!
                         </div>
                     <?php else: ?>
+                        <div class="">Number of Post: <?php echo $search_query->rowCount(); ?> </div>
                         <?php foreach($posts as $posts): ?>
                         <div class="post-preview">
                             <a href="posts/post.php?post_id=<?php echo $posts->ID ?>">
